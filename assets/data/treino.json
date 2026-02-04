@@ -1,0 +1,587 @@
+[
+    {
+        "treino": "Sup I",
+        "exercises": [
+            {
+                "nome": "Pulldown corda",
+                "series": [
+                    {
+                        "tipo": 1,
+                        "qtd": "15-20",
+                        "descanso": 60
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Supino inclinado maquina",
+                "series": [
+                    {
+                        "tipo": 1,
+                        "qtd": "15-20",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 2,
+                        "qtd": "4-6",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Remada pronada",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "3-5",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Cross over",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Low Row",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Supino declinado",
+                "series": [
+                    {
+                        "tipo": 2,
+                        "qtd": "4-6",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "6-8",
+                        "descanso": 120
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "treino": "Inf I",
+        "exercises": [
+            {
+                "nome": "Cadeira adutora",
+                "series": [
+                    {
+                        "tipo": 1,
+                        "qtd": "15-20",
+                        "descanso": 60
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Hack machine",
+                "series": [
+                    {
+                        "tipo": 1,
+                        "qtd": "15-20",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 2,
+                        "qtd": "4-6",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "6-8",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Leg press 45",
+                "series": [
+                    {
+                        "tipo": 2,
+                        "qtd": "4-6",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Cad flexora",
+                "series": [
+                    {
+                        "tipo": 1,
+                        "qtd": "15-20",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 2,
+                        "qtd": "4-6",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Elev pelvica",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Panturrilha maq",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "12-15",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "treino": "Sup II",
+        "exercises": [
+            {
+                "nome": "Desenvolvimento maq",
+                "series": [
+                    {
+                        "tipo": 1,
+                        "qtd": "15-20",
+                        "descanso": 60
+                    },
+                    {
+                        "tipo": 2,
+                        "qtd": "4-6",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "6-8",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Elev lateral polia",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "12-15",
+                        "descanso": 60
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "12-15",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Peck fly inverso",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Rosca scott",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "6-8",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Triceps frances",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "6-8",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Abdominal supra",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "treino": "Inf II",
+        "exercises": [
+            {
+                "nome": "Mesa flexora",
+                "series": [
+                    {
+                        "tipo": 1,
+                        "qtd": "15-20",
+                        "descanso": 60
+                    },
+                    {
+                        "tipo": 3,
+                        "qtd": "12-15",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Stiff",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "12-15",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Bulgaro",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "12-15",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "6-8",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "6-8",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Cadeira extensora",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "4+4+4",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Cadeira abdutora",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "12-15",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "12+12",
+                        "descanso": 120
+                    }
+                ]
+            },
+            {
+                "nome": "Panturrilha maq",
+                "series": [
+                    {
+                        "tipo": 3,
+                        "qtd": "12-15",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "10-12",
+                        "descanso": 120
+                    },
+                    {
+                        "tipo": 4,
+                        "qtd": "8-10",
+                        "descanso": 120
+                    }
+                ]
+            }
+        ]
+    }
+]
