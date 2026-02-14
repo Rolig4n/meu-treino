@@ -28,19 +28,24 @@ interface Treinos {
 }
 
 const Treino = () => (
-    <ThemedView style={styles.stepContainer}>
+    // container geral
+    <ThemedView style={{gap: 8,
+        marginBottom: 8, borderColor: 'pink', borderWidth: 1}}>
+        {/* Treino */}
         {treinoData.map((treino) => (
-            <ThemedView key={treino.treino} style={{ marginBottom: 24 }}>
+            <ThemedView key={treino.treino} style={{ marginBottom: 24, borderColor: 'purple', borderWidth: 1 }}>
                 <ThemedText type="subtitle" style={{ fontWeight: '700', fontSize: 20 }}>
                     {treino.treino}
                 </ThemedText>
 
+                {/* Exercicio */}
                 {treino.exercises.map((ex, index) => (
-                    <ThemedView key={index} style={{ marginTop: 12, paddingLeft: 8 }}>
+                    <ThemedView key={index} style={{ marginTop: 12, paddingLeft: 8, borderColor: 'cyan', borderWidth: 1 }}>
                         <ThemedText style={{ fontWeight: '600', fontSize: 16, marginBottom: 4 }}>
                             {ex.nome}
                         </ThemedText>
 
+                        {/* Serie */}
                         {ex.series.map((serie, sIndex) => {
                             const config = TIPO_CONFIG[serie.tipo] || { label: 'N/A', color: '#000' };
                             
@@ -49,7 +54,8 @@ const Treino = () => (
                                     flexDirection: 'row', 
                                     alignItems: 'center', 
                                     marginBottom: 4,
-                                    gap: 8 
+                                    gap: 8,
+                                    borderColor: 'yellow', borderWidth: 1
                                 }}>
                                     <ThemedView style={{
                                         backgroundColor: config.color,

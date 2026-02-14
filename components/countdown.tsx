@@ -1,6 +1,7 @@
 import { ThemedText } from '@/components/themed-text';
 import React, { Component } from 'react';
 import Countdown, { CountdownApi } from 'react-countdown';
+import { Bounce, ToastContainer, toast } from 'react-toastify';
 
 interface CountdownExProps {
     qtd: number;
@@ -15,6 +16,11 @@ export default class CountdownEx extends Component<CountdownExProps> {
     };
 
     handleUpdate = (): void => {
+        this.forceUpdate();
+    };
+
+    handleComplete = (): void => {
+        toast("Acabo o descanço!");
         this.forceUpdate();
     };
 
@@ -46,14 +52,26 @@ export default class CountdownEx extends Component<CountdownExProps> {
                             ref={this.setRef}
                             date={this.state.date}
                             onStart={this.handleUpdate}
-                            onComplete={this.handleUpdate}
+                            onComplete={this.handleComplete}
                             autoStart={false}
-                            renderer={props => 
+                            renderer={props =>
                                 <ThemedText style={{ fontSize: 10, color: '#888' }}>
                                     {props.minutes}:{props.seconds}
                                 </ThemedText>}
                         />
                     </button>
+                    <ToastContainer 
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick={false}
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable={false}
+                        pauseOnHover={false}
+                        theme="dark"
+                        transition={Bounce} />
                 </div>
             </>
         );
