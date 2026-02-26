@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
@@ -26,6 +26,8 @@ export default function HomeScreen() {
   );
 }
 
+const screenHeight = Dimensions.get('window').height;
+
 const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
+    height: screenHeight * 0.4,
     width: 290,
     bottom: 0,
     left: 0,

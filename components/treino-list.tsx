@@ -12,7 +12,7 @@ const TIPO_CONFIG: Record<number, { label: string; color: string }> = {
 };
 
 interface Series {
-    tipo: number; 
+    tipo: number;
     qtd: string;
     descanso: number; // em segundos
 }
@@ -29,18 +29,17 @@ interface Treinos {
 
 const Treino = () => (
     // container geral
-    <ThemedView style={{gap: 8,
-        marginBottom: 8, borderColor: 'pink', borderWidth: 1}}>
+    <ThemedView style={{gap: 8, marginBottom: 8}}>
         {/* Treino */}
         {treinoData.map((treino) => (
-            <ThemedView key={treino.treino} style={{ marginBottom: 24, borderColor: 'purple', borderWidth: 1 }}>
+            <ThemedView key={treino.treino} style={styles.treinoContainer}>
                 <ThemedText type="subtitle" style={{ fontWeight: '700', fontSize: 20 }}>
                     {treino.treino}
                 </ThemedText>
 
                 {/* Exercicio */}
                 {treino.exercises.map((ex, index) => (
-                    <ThemedView key={index} style={{ marginTop: 12, paddingLeft: 8, borderColor: 'cyan', borderWidth: 1 }}>
+                    <ThemedView key={index} style={styles.exercicioContainer}>
                         <ThemedText style={{ fontWeight: '600', fontSize: 16, marginBottom: 4 }}>
                             {ex.nome}
                         </ThemedText>
@@ -48,15 +47,9 @@ const Treino = () => (
                         {/* Serie */}
                         {ex.series.map((serie, sIndex) => {
                             const config = TIPO_CONFIG[serie.tipo] || { label: 'N/A', color: '#000' };
-                            
+
                             return (
-                                <ThemedView key={sIndex} style={{ 
-                                    flexDirection: 'row', 
-                                    alignItems: 'center', 
-                                    marginBottom: 4,
-                                    gap: 8,
-                                    borderColor: 'yellow', borderWidth: 1
-                                }}>
+                                <ThemedView key={sIndex} style={styles.serieContainer}>
                                     <ThemedView style={{
                                         backgroundColor: config.color,
                                         paddingHorizontal: 6,
@@ -70,7 +63,7 @@ const Treino = () => (
                                         </ThemedText>
                                     </ThemedView>
 
-                                    <CountdownEx qtd={serie.descanso}/>
+                                    <CountdownEx qtd={serie.descanso} />
                                 </ThemedView>
                             );
                         })}
@@ -85,6 +78,24 @@ const styles = StyleSheet.create({
     stepContainer: {
         gap: 8,
         marginBottom: 8,
+    },
+    treinoContainer: {
+        marginBottom: 24,
+        borderColor: 'purple',
+        borderWidth: 1
+    },
+    exercicioContainer: {
+        marginTop: 12,
+        paddingLeft: 8,
+        borderColor: 'cyan',
+        borderWidth: 1
+    },
+    serieContainer: {
+        gap: 8,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 4,
+        borderColor: 'yellow', borderWidth: 1
     }
 });
 
