@@ -1,6 +1,7 @@
 import { ThemedText } from '@/components/themed-text';
 import React, { Component } from 'react';
 import Countdown, { CountdownApi } from 'react-countdown';
+import { Pressable } from 'react-native';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 
 interface CountdownExProps {
@@ -42,10 +43,10 @@ export default class CountdownEx extends Component<CountdownExProps> {
         return (
             <>
                 <div>
-                    <button
-                        type="button"
-                        onClick={this.handleStartClick}
+                    <Pressable
+                        onPress={this.handleStartClick}
                         disabled={this.isCompleted()}
+                        style={{ backgroundColor: '#333', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}
                     >
                         <Countdown
                             key={this.state.date}
@@ -59,7 +60,7 @@ export default class CountdownEx extends Component<CountdownExProps> {
                                     {props.minutes}:{props.seconds}
                                 </ThemedText>}
                         />
-                    </button>
+                    </Pressable>
                     <ToastContainer 
                         position="bottom-center"
                         autoClose={5000}
