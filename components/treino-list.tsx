@@ -29,7 +29,7 @@ interface Treinos {
 
 const Treino = () => (
     // container geral
-    <ThemedView style={{gap: 8, marginBottom: 8}}>
+    <ThemedView style={{gap: 8, marginBottom: 8, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
         {/* Treino */}
         {treinoData.map((treino) => (
             <ThemedView key={treino.treino} style={styles.treinoContainer}>
@@ -40,7 +40,7 @@ const Treino = () => (
                 {/* Exercicio */}
                 {treino.exercises.map((ex, index) => (
                     <ThemedView key={index} style={styles.exercicioContainer}>
-                        <ThemedText style={{ fontWeight: '600', fontSize: 16, marginBottom: 4 }}>
+                        <ThemedText style={{ fontWeight: '600', fontSize: 16, marginBottom: 8, marginTop: 4}}>
                             {ex.nome}
                         </ThemedText>
 
@@ -52,6 +52,7 @@ const Treino = () => (
                                 <ThemedView key={sIndex} style={styles.serieContainer}>
                                     <ThemedView style={{
                                         backgroundColor: config.color,
+                                        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)',
                                         paddingHorizontal: 6,
                                         paddingVertical: 2,
                                         borderRadius: 4,
@@ -81,21 +82,26 @@ const styles = StyleSheet.create({
     },
     treinoContainer: {
         marginBottom: 24,
-        borderColor: 'purple',
-        borderWidth: 1
+        backgroundColor: 'rgba(128, 128, 128, 0.1)',
+        borderRadius: 12,
+        padding: 12,
+        minWidth: 300,
+        flexGrow: 1,
     },
     exercicioContainer: {
         marginTop: 12,
         paddingLeft: 8,
-        borderColor: 'cyan',
-        borderWidth: 1
+        paddingRight: 8,
+        backgroundColor: 'rgba(128, 128, 128, 0.1)',
+        borderRadius: 8,
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)',
     },
     serieContainer: {
         gap: 8,
         flexDirection: 'row',
-        alignItems: 'center',
-        marginBottom: 4,
-        borderColor: 'yellow', borderWidth: 1
+        justifyContent: 'space-between',
+        marginBottom: 8,
+        backgroundColor: 'rgba(128, 128, 128, 0)',
     }
 });
 

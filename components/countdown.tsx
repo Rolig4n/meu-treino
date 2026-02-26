@@ -1,8 +1,7 @@
 import { ThemedText } from '@/components/themed-text';
 import React, { Component } from 'react';
 import Countdown, { CountdownApi } from 'react-countdown';
-import { Pressable } from 'react-native';
-import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { Alert, Platform, Pressable } from 'react-native';
 
 interface CountdownExProps {
     qtd: number;
@@ -20,8 +19,16 @@ export default class CountdownEx extends Component<CountdownExProps> {
         this.forceUpdate();
     };
 
+    showAlert = (message: string): void => {
+        if (Platform.OS === 'web') {
+            window.alert(message);
+        } else {
+            Alert.alert(message);
+        }
+    }
+
     handleComplete = (): void => {
-        toast("Acabo o descanço!");
+        this.showAlert("Acabou o descanço!");
         this.forceUpdate();
     };
 
@@ -46,7 +53,7 @@ export default class CountdownEx extends Component<CountdownExProps> {
                     <Pressable
                         onPress={this.handleStartClick}
                         disabled={this.isCompleted()}
-                        style={{ backgroundColor: '#333', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}
+                        style={{ backgroundColor: '#333', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}
                     >
                         <Countdown
                             key={this.state.date}
@@ -61,18 +68,6 @@ export default class CountdownEx extends Component<CountdownExProps> {
                                 </ThemedText>}
                         />
                     </Pressable>
-                    <ToastContainer 
-                        position="bottom-center"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick={false}
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable={false}
-                        pauseOnHover={false}
-                        theme="dark"
-                        transition={Bounce} />
                 </div>
             </>
         );
