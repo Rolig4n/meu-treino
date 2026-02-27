@@ -49,26 +49,24 @@ export default class CountdownEx extends Component<CountdownExProps> {
     render() {
         return (
             <>
-                <div>
-                    <Pressable
-                        onPress={this.handleStartClick}
-                        disabled={this.isCompleted()}
-                        style={{ backgroundColor: '#333', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}
-                    >
-                        <Countdown
-                            key={this.state.date}
-                            ref={this.setRef}
-                            date={this.state.date}
-                            onStart={this.handleUpdate}
-                            onComplete={this.handleComplete}
-                            autoStart={false}
-                            renderer={props =>
-                                <ThemedText style={{ fontSize: 10, color: '#888' }}>
-                                    {props.minutes}:{props.seconds}
-                                </ThemedText>}
-                        />
-                    </Pressable>
-                </div>
+                <Pressable
+                    onPress={this.handleStartClick}
+                    disabled={this.isCompleted()}
+                    style={{ backgroundColor: '#333', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}
+                >
+                    <Countdown
+                        key={this.state.date}
+                        ref={this.setRef}
+                        date={this.state.date}
+                        onStart={this.handleUpdate}
+                        onComplete={this.handleComplete}
+                        autoStart={false}
+                        renderer={props =>
+                            <ThemedText style={{ fontSize: 10, color: '#888' }}>
+                                {props.minutes}:{props.seconds}
+                            </ThemedText>}
+                    />
+                </Pressable>
             </>
         );
     }
