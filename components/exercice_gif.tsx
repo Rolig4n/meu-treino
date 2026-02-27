@@ -24,7 +24,7 @@ export default function ExeciceGif(props: ExGifProps) {
                             <Pressable
                                 style={[styles.button, styles.buttonClose]}
                                 onPress={() => setModalVisible(!modalVisible)}>
-                                <Text style={styles.textStyle}>Fechar</Text>
+                                <Text style={styles.textStyle}>✖️</Text>
                             </Pressable>
                         </View>
                     </View>
@@ -47,37 +47,35 @@ const styles = StyleSheet.create({
     },
     modalView: {
         margin: 20,
-        backgroundColor: 'white',
-        borderRadius: 20,
-        padding: 35,
+        backgroundColor: '#959595', // Tom cinza claro (fundo do modal)
+        borderRadius: 8,
+        padding: 20,
         alignItems: 'center',
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        elevation: 5,
     },
     button: {
-        borderRadius: 20,
-        padding: 10,
-        elevation: 2,
+        borderRadius: 6,
+        paddingHorizontal: 4,
+        marginLeft: 4,
+        boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.15)',
     },
     buttonOpen: {
-        backgroundColor: '#F194FF',
+        backgroundColor: '#4A4A4A',
     },
     buttonClose: {
-        backgroundColor: '#2196F3',
+        backgroundColor: '#383838',
+        marginTop: 15,
     },
     textStyle: {
-        color: 'white',
+        color: 'white', 
+        fontSize: 10,
         fontWeight: 'bold',
         textAlign: 'center',
     },
     modalText: {
-        marginBottom: 15,
+        marginTop: 4,
+        marginBottom: 8,
         textAlign: 'center',
+        color: '#333333',
+        fontSize: 16,
     },
 });
