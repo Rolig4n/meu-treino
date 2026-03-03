@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "meu-treino",
-    "slug": "meu-treino",
+    "name": "Meu Treino",
+    "slug": "meu_treino",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/mt_icon_2.png",
