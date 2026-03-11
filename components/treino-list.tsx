@@ -1,5 +1,6 @@
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { useLocalSearchParams } from 'expo-router';
 import { StyleSheet } from 'react-native';
 import CountdownEx from './countdown';
 import ExeciceGif from './exercice_gif';
@@ -28,18 +29,34 @@ interface Treinos {
     exercises: Exercises[];
 }
 
-const Treino = () => (
-    // container geral
-    <ThemedView style={{gap: 8, marginBottom: 8, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
-        {/* Treino */}
-        {treinoData.map((treino) => (
-            <ThemedView key={treino.treino} style={styles.treinoContainer}>
+const Treino = () => {
+    // Captura o parâmetro passado pela navegação da Home
+    const { treinoId } = useLocalSearchParams();
+
+    // Filtra o JSON buscando apenas o treino correspondente ao ID
+    const treinoSelecionado = treinoData.find(t => t.treino === treinoId);
+
+    // Fallback caso acesse a tela sem nenhum treino selecionado
+    if (!treinoSelecionado) {
+        return (
+            <ThemedView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <ThemedText>Nenhum treino selecionado.</ThemedText>
+            </ThemedView>
+        );
+    }
+
+    return (
+        // container geral
+        <ThemedView style={{gap: 8, marginBottom: 8, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
+            
+            {/* Renderiza diretamente o treino selecionado sem o .map() externo */}
+            <ThemedView style={styles.treinoContainer}>
                 <ThemedText type="subtitle" style={{ fontWeight: '700', fontSize: 20 }}>
-                    {treino.treino}
+                    {treinoSelecionado.treino}
                 </ThemedText>
 
                 {/* Exercicio */}
-                {treino.exercises.map((ex, index) => (
+                {treinoSelecionado.exercises.map((ex, index) => (
                     <ThemedView key={index} style={styles.exercicioContainer}>
                         <ThemedText style={{ fontWeight: '600', fontSize: 16, marginBottom: 8, marginTop: 4}}>
                             {ex.nome} <ExeciceGif exercicio={ex.nome} />
@@ -72,9 +89,9 @@ const Treino = () => (
                     </ThemedView>
                 ))}
             </ThemedView>
-        ))}
-    </ThemedView>
-);
+        </ThemedView>
+    );
+};
 
 const styles = StyleSheet.create({
     stepContainer: {
