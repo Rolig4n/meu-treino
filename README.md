@@ -48,3 +48,19 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+# Executando o Meu Treino - para Android
+
+São dois comandos para testes diferentes do app, o de desenvolvimento e o de preview
+
+- O de desenvolvimento pode ser adquirido depois da build do mesmo
+
+```bash
+eas build --platform android --profile development
+```
+
+- O de preview é o mesmo passo, a diferença que esse gera um APK para ser instalado e usado no dispositivo Android
+
+```bash
+eas build --platform android --profile preview
+```

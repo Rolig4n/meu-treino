@@ -3,7 +3,6 @@ import { ThemedView } from '@/components/themed-view';
 import { useLocalSearchParams } from 'expo-router';
 import { StyleSheet } from 'react-native';
 import CountdownEx from './countdown';
-import ExeciceGif from './exercice_gif';
 
 const treinoData: Treinos[] = require('@/assets/data/treino.json');
 const TIPO_CONFIG: Record<number, { label: string; color: string }> = {
@@ -59,7 +58,7 @@ const Treino = () => {
                 {treinoSelecionado.exercises.map((ex, index) => (
                     <ThemedView key={index} style={styles.exercicioContainer}>
                         <ThemedText style={{ fontWeight: '600', fontSize: 16, marginBottom: 8, marginTop: 4}}>
-                            {ex.nome} <ExeciceGif exercicio={ex.nome} />
+                            {ex.nome}
                         </ThemedText>
 
                         {/* Serie */}
