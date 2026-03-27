@@ -1,11 +1,21 @@
 import { ThemedText } from '@/components/themed-text';
+import * as Notifications from 'expo-notifications';
 import React, { Component } from 'react';
 import Countdown, { CountdownApi } from 'react-countdown';
-import { Alert, Platform, Pressable } from 'react-native';
+import { Platform, Pressable } from 'react-native';
 
 interface CountdownExProps {
     qtd: number;
 }
+
+Notifications.setNotificationHandler({
+    handleNotification: async () => ({
+        shouldPlaySound: false,
+        shouldSetBadge: false,
+        shouldShowBanner: true,
+        shouldShowList: true,
+    }),
+});
 
 export default class CountdownEx extends Component<CountdownExProps> {
     countdownApi: CountdownApi | null = null;
@@ -23,7 +33,14 @@ export default class CountdownEx extends Component<CountdownExProps> {
         if (Platform.OS === 'web') {
             window.alert(message);
         } else {
-            Alert.alert(message);
+            // Alert.alert(message); // trocar pela nofication
+            Notifications.scheduleNotificationAsync({
+                content: {
+                    title: 'Look at that notification',
+                    body: "I'm so proud of myself!",
+                },
+                trigger: null,
+            });
         }
     }
 

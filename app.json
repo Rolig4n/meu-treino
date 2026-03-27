@@ -2,7 +2,7 @@
   "expo": {
     "name": "Meu Treino",
     "slug": "meu-treino",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/mt_icon_2.png",
     "scheme": "meutreino",
@@ -18,7 +18,9 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.rolig4n.meutreino"
+      "package": "com.rolig4n.meutreino",
+      "permissions": ["RECEIVE_BOOT_COMPLETED", "SCHEDULE_EXACT_ALARM"]
+      // ,"blockedPermissions": []
     },
     "web": {
       "output": "static",
@@ -36,6 +38,19 @@
           "dark": {
             "backgroundColor": "#000"
           }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/splash-icon.png",
+          "color": "#525252",
+          "defaultChannel": "default",
+          // "sounds": [
+          //   "./local/assets/notification_sound.wav",
+          //   "./local/assets/notification_sound_other.wav"
+          // ],
+          "enableBackgroundRemoteNotifications": false
         }
       ]
     ],
